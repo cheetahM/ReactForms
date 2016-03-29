@@ -8,8 +8,12 @@ function puke(obj) {
 function FormFieldWrapper (props) {
   return (
     <div>
-      <label htmlFor={props.id}>{props.label}</label>
-      <ViewInput type={props.type} id={props.id} />
+      <ViewInput
+        type={props.type}
+        id={props.id}
+        text={props.text}
+        updateInput={props.onUpdate}
+        placeholder={props.placeholder} />
     </div>
   )
 }

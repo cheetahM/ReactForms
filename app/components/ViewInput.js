@@ -2,7 +2,14 @@ var React = require('react');
 
 function ViewInput (props) {
   return (
-    <input type={props.type} id={props.id} />
+    <div>
+    <label htmlFor={props.id}>{props.text}</label>
+    <input
+      type={props.type}
+      id={props.id}
+      onChange={props.updateInput}
+      placeholder={props.placeholder} />
+    </div>
   )
 }
 
