@@ -1,18 +1,13 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+var Signup = require('./components/Signup');
 
-/*var Hello = React.createClass({
-  render: function() {
-    return (
-      <div>Hello!!</div>
-    )
-  }
-})*/
-
-function Hello(){
+function CreateAccount(){
   return (
-    <div>Hello World!!</div>
+    <div>
+      <Signup />
+    </div>
   )
 }
 
-ReactDOM.render(<Hello />, document.getElementById('app'));
+ReactDOM.render(<CreateAccount />, document.getElementById('app'));
