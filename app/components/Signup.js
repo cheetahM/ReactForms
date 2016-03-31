@@ -1,10 +1,16 @@
 var React = require('react');
+var PropTypes = React.PropTypes;
 var FormFieldWrapper = require('./FormFieldWrapper');
+var transparentBg = require('../styles').transparentBg;
 
 var Signup = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
   },
+/*  propTypes: {
+    value: PropTypes.object.isRequired,
+    onChange: PropTypes.func.isRequired
+  }, */
   getInitialState: function() {
     return {
       email: null,
@@ -35,8 +41,8 @@ var Signup = React.createClass({
   },
   render: function() {
     return (
-      <div>
-      <form onSubmit={this.onSubmitCreateAccount}>
+      <div className='jumbotron col-sm-12 text-center' style={transparentBg}>
+      <form className='form-control' onSubmit={this.onSubmitCreateAccount}>
         <fieldset>
           <h1>Create account</h1>
           <p>Example of form validation built with React.</p>

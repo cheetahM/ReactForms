@@ -8,7 +8,8 @@ function ViewInput (props) {
       type={props.type}
       id={props.id}
       onChange={props.updateInput}
-      placeholder={props.placeholder} />
+      placeholder={props.placeholder}
+      value={props.value} />
     </div>
   )
 }
