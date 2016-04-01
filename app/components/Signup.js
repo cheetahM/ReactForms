@@ -2,6 +2,7 @@ var React = require('react');
 var PropTypes = React.PropTypes;
 var FormFieldWrapper = require('./FormFieldWrapper');
 var transparentBg = require('../styles').transparentBg;
+var styles = require('../styles');
 
 var Signup = React.createClass({
   contextTypes: {
@@ -16,6 +17,9 @@ var Signup = React.createClass({
       email: null,
       password: null
     }
+  },
+  componentDidMount: function(e) {
+
   },
   updateEmailAddress: function(e) {
     console.log(e.target.value);
@@ -42,17 +46,17 @@ var Signup = React.createClass({
   render: function() {
     return (
       <div className='jumbotron col-sm-12 text-center' style={transparentBg}>
+      <h1 className='title'>Create account</h1>
+      <p>Example of form validation built with React.</p>
       <form className='form-control' onSubmit={this.onSubmitCreateAccount}>
         <fieldset>
-          <h1>Create account</h1>
-          <p>Example of form validation built with React.</p>
           <FormFieldWrapper
             id="email"
             type="email"
             text="Email"
             value={this.state.email}
             placeholder='Enter Email'
-            onUpdate={this.updateEmailAddress}/>
+            onUpdate={this.updateEmailAddress} />
           <FormFieldWrapper
             id="password"
             type="password"
@@ -60,7 +64,7 @@ var Signup = React.createClass({
             value={this.state.password}
             placeholder='Enter Password'
             onUpdate={this.updatePassword} />
-          <button type="submit">Submit</button>
+          <button className='btn-submit' type="submit">Submit</button>
         </fieldset>
       </form>
       </div>

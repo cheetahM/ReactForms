@@ -7,7 +7,7 @@ function puke(obj) {
 
 function FormFieldWrapper (props) {
   return (
-    <div>
+    <div className='form-field'>
       <ViewInput
         type={props.type}
         id={props.id}
