@@ -6,6 +6,9 @@ function puke(obj) {
 }
 
 function FormFieldWrapper (props) {
+  console.log(props.isLabelFloating);
+  const placeholder = props.isLabelFloating ? props.placeholder : null;
+    const labelClass = props.isLabelFloating ? 'is-floating' : null;
   return (
     <div className='form-field'>
       <ViewInput
@@ -13,7 +16,9 @@ function FormFieldWrapper (props) {
         id={props.id}
         text={props.text}
         updateInput={props.onUpdate}
-        placeholder={props.placeholder} />
+        placeholder={placeholder}
+        onFocus={props.onFocus}
+         onBlur={props.onBlur} />
     </div>
   )
 }

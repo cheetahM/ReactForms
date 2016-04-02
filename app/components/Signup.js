@@ -15,12 +15,23 @@ var Signup = React.createClass({
   getInitialState: function() {
     return {
       email: null,
-      password: null
+      password: null,
+      isLabelFloating: false
     }
   },
   componentDidMount: function(e) {
 
   },
+  handleFocus() {
+    console.log("handle focus");
+   this.setState({isLabelFloating: true});
+ },
+
+ handleBlur(e) {
+   if (!e.target.value) {
+     this.setState({isLabelFloating: false});
+   }
+ },
   updateEmailAddress: function(e) {
     console.log(e.target.value);
     this.setState({
@@ -56,14 +67,20 @@ var Signup = React.createClass({
             text="Email"
             value={this.state.email}
             placeholder='Enter Email'
-            onUpdate={this.updateEmailAddress} />
+            isLabelFloating={this.state.isLabelFloating}
+            onUpdate={this.updateEmailAddress}
+            onFocus={this.handleFocus.bind(this)}
+            onBlur={this.handleBlur.bind(this)} />
           <FormFieldWrapper
             id="password"
             type="password"
             text="Password"
             value={this.state.password}
             placeholder='Enter Password'
-            onUpdate={this.updatePassword} />
+            isLabelFloating={this.state.isLabelFloating}
+            onUpdate={this.updatePassword}
+            onFocus={this.handleFocus.bind(this)}
+            onBlur={this.handleBlur.bind(this)} />
           <button className='btn-submit' type="submit">Submit</button>
         </fieldset>
       </form>
