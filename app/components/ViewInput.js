@@ -1,9 +1,13 @@
 var React = require('react');
 
 function ViewInput (props) {
+  const placeholder = props.isLabelFloating ? props.placeholder : null;
+    const labelClass = props.isLabelFloating ? 'is-floating' : null;
+    console.log(props.isLabelFloating);
+    console.log(labelClass);
   return (
     <div className='text-field'>
-    <label htmlFor={props.id}>{props.text}</label>
+    <label htmlFor={props.id} className={labelClass}>{props.text}</label>
     <input
       type={props.type}
       id={props.id}

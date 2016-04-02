@@ -17,6 +17,7 @@ function FormFieldWrapper (props) {
         text={props.text}
         updateInput={props.onUpdate}
         placeholder={placeholder}
+        isLabelFloating={props.isLabelFloating}
         onFocus={props.onFocus}
          onBlur={props.onBlur} />
     </div>
