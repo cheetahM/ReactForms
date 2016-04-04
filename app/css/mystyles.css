@@ -67,16 +67,6 @@ label {
     left: 1.23em;
     color: #f1773b;
     opacity: 1;
-    -webkit-transition: .333s ease top, .333s ease opacity;
-    transition: .333s ease top, .333s ease opacity;
-}
-.js-hide-label label {
-    opacity: 0;
-    top: 1.5em
-}
-
-.js-unhighlight-label label {
-    color: #999
 }
 
 .btn-submit {
@@ -114,6 +104,10 @@ label {
   cursor: text;
   position: absolute; top: 7px; left: 12px;
   transition: all 250ms ease;
+}
+
+.text-field .form-control:focus + label {
+  top: -16px;
 }
 
 .text-field label.is-floating {
