@@ -6,7 +6,7 @@ function ViewInput (props) {
     console.log(props.isLabelFloating);
     console.log(labelClass);
   return (
-    <div className='text-field'>
+    <div className='text-field js-hide-label'>
     <label htmlFor={props.id} className={labelClass}>{props.text}</label>
     <input
       type={props.type}
