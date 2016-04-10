@@ -21,11 +21,21 @@ body, input, textarea {
 
 }
 
-.flex-container {
-  display: -webkit-flex; /* Safari */
-  display: flex;
-  -webkit-justify-content: center; /* Safari */
-  justify-content:         center;
+.header-flex-container {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-end;
+    align-items: flex-start;
+}
+
+.flex-item {
+    width: 300px;
+    height: 70px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 100px;
 }
 
 .title {
