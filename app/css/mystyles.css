@@ -31,7 +31,7 @@ body, input, textarea {
 }
 
 .flex-item {
-    width: 300px;
+    width: 200px;
     height: 70px;
     flex-grow: 1;
     flex-shrink: 0;
